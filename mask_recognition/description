@@ -1,0 +1,13 @@
+This is a masked face classifier: it frames faces with masks in green and without in red
+
+The solution consists of:
+  1. searching for faces with a built-in function (works well with masks on too)
+  2. detecting on each face a mask
+    - detecting a white spot with a max of global face histogram near white(255 for each color-channel)
+    - ignoring too dark images
+    - detecting lips with a built-in function
+    - other than that, a template of a blue mask may be matched(if given to function)
+  3. framing faces
+  
+There are some ideas in improving the solution: normalize input pictures and finishing template-implementation
+Also, searching for eyes and cropping a face using them only
